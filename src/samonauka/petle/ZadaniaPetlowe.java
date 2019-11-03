@@ -1,13 +1,10 @@
 package samonauka.petle;
 
+import java.util.Arrays;
+
+import static java.lang.Integer.sum;
+
 public class ZadaniaPetlowe {
-
-/**
-
-
- Napisz metodę, która jako jedyny argument przyjmie zmienną typu int[] i zwróci sumę wszystkich elementów tablicy.
- Przerób funkcję z zadania piątego tak, żeby metoda przyjmowała tablicę dwuwymiarową typu int[][].
-*/
 
 public static void main(String[] args) {
 
@@ -15,6 +12,11 @@ public static void main(String[] args) {
     //tenToTwenty();
     //forLoop();
     //whileLoop();
+    int[] board= new int[]{2,4,6,5,3};
+    //tablica(board);
+    int[][] board2 = new int[][]{{2,3},{4,6},{6,3},{3,3}};
+    int[][] board3 = new int[][]{{2,3},{4,6}};
+    tablicaDwuwymiarowa(board3);
 
 }
 
@@ -78,4 +80,46 @@ static void whileLoop(){
 
 }
 
+/**
+ *Napisz metodę, która jako jedyny argument przyjmie zmienną typu int[] i zwróci sumę wszystkich elementów tablicy.
+ */
+
+static void tablica(int[] tablicowo){
+
+    int suma =0;
+for (int i=0; i<tablicowo.length; i++){
+    //System.out.println(Arrays.toString(new int[]{tablicowo[i]}));
+    suma += tablicowo[i];
+    System.out.println(suma);
 }
+
+}
+
+/**
+ * Przerób funkcję z zadania piątego tak, żeby metoda przyjmowała tablicę dwuwymiarową typu int[][].
+ */
+
+static void tablicaDwuwymiarowa (int[][] tablicowo2){
+
+    int suma =0;
+    for (int[] othernumbers : tablicowo2){
+        System.out.println(Arrays.toString(othernumbers));
+        for (int number : othernumbers){
+            suma += number;
+            System.out.println(suma);
+        }
+    }
+
+}
+
+}
+    /**private static int sumArray(int[][] numbers) {
+        int sum = 0;
+        for (int[] otherNumbers : numbers) {
+            for (int number : otherNumbers) {
+                sum += number;
+            }
+        }
+        return sum;
+    }
+     */
